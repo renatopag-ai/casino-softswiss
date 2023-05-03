@@ -3,8 +3,8 @@ on:
   push:
     branches: [ main ]
 jobs:
-  environment: DEV
   build-and-push:
+    environment: DEV
     name: Build and Push to ECR
     runs-on: ubuntu-latest
     steps:
