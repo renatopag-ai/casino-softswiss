@@ -1,0 +1,60 @@
+CRITICAL - 2023-04-27 19:08:00 --> Call to undefined function App\Controllers\generateSignature()
+in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:09:05 --> Undefined constant "X_REQUEST_SIGN"
+in APPPATH/Helpers/Softswiss_helper.php on line 6.
+ 1 APPPATH/Controllers/Home.php(43): generateSignature([...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:10:15 --> Undefined constant "X_REQUEST_SIGN"
+in APPPATH/Helpers/Softswiss_helper.php on line 6.
+ 1 APPPATH/Controllers/Home.php(43): generateSignature([...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:11:48 --> hash_hmac(): Argument #2 ($data) must be of type string, array given
+in APPPATH/Helpers/Softswiss_helper.php on line 6.
+ 1 APPPATH/Helpers/Softswiss_helper.php(6): hash_hmac('sha256', [...], 'dhf4jdsuhzdza69d')
+ 2 APPPATH/Controllers/Home.php(43): generateSignature([...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:18:37 --> Object of class stdClass could not be converted to string
+in APPPATH/Controllers/Home.php on line 66.
+ 1 APPPATH/Controllers/Home.php(66): curl_setopt_array(Object(CurlHandle), [...])
+ 2 APPPATH/Controllers/Home.php(45): App\Controllers\Home->curl([...], 'ba0725591fcb3c8e9f627f4734bd33a1fb982d84f3aa82154b463ac2f9594ec9', 'sessions')
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:20:46 --> Object of class stdClass could not be converted to string
+in APPPATH/Controllers/Home.php on line 68.
+ 1 APPPATH/Controllers/Home.php(68): curl_setopt_array(Object(CurlHandle), [...])
+ 2 APPPATH/Controllers/Home.php(47): App\Controllers\Home->curl([...], 'ba0725591fcb3c8e9f627f4734bd33a1fb982d84f3aa82154b463ac2f9594ec9', 'sessions')
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 19:23:30 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Home.php on line 49.
+ 1 APPPATH/Controllers/Home.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/var/www/html/app/Controllers/Home.php', 49)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 20:46:54 --> Unclosed '[' does not match ')'
+in APPPATH/Controllers/Home.php on line 102.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/app/Controllers/Home.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH/CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

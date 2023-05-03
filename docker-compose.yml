@@ -1,0 +1,57 @@
+version: '3'
+services:
+    web:
+        build:
+            context: .
+            dockerfile: docker/apache/Dockerfile
+            args:
+                uid: ${UID}
+        environment:
+            - APACHE_RUN_USER=#${UID}
+            - APACHE_RUN_GROUP=#${UID}
+            - ALLOW_EMPTY_PASSWORD=no
+            - CODEIGNITER_DATABASE_HOST=#${CODEIGNITER_DATABASE_HOST}
+            - CODEIGNITER_DATABASE_PORT_NUMBER=#${CODEIGNITER_DATABASE_PORT_NUMBER}
+            - CODEIGNITER_DATABASE_USER=#${CODEIGNITER_DATABASE_USER}
+            - CODEIGNITER_DATABASE_PASSWORD=#${CODEIGNITER_DATABASE_PASSWORD}
+            - CODEIGNITER_DATABASE_NAME=#${CODEIGNITER_DATABASE_NAME}
+
+        restart: unless-stopped
+        volumes: 
+            - ./src:/var/www/html
+            - ./apache_log:/var/log/apache2
+        ports:
+            - 80:80
+        networks:
+            - rede1
+        
+    
+#    redis:
+#        build:
+#            context: .
+#            dockerfile: docker/redis/Dockerfile
+#        ports:
+#            - 6379:6379
+#        networks:
+#            - rede1
+    
+    
+    redis-commander:
+        container_name: redis-commander
+        hostname: redis-commander
+        image: rediscommander/redis-commander:latest
+        restart: always
+        environment:
+            - REDIS_HOSTS=sga-dev-redis.2mhta2.0001.euw1.cache.amazonaws.com
+        ports:
+            - "8081:8081"
+            - "6379:6379"
+        networks:
+            - rede1
+    
+networks:
+    rede1:
+        driver: bridge
+
+
+        
