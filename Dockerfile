@@ -31,7 +31,7 @@ RUN docker-php-ext-install \
     mysqli
 
 # 2. set up document root for apache
-COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # 3. mod_rewrite for URL rewrite and mod_headers for .htaccess extra headers like Access-Control-Allow-Origin-
 RUN a2enmod rewrite headers
